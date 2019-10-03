@@ -1,0 +1,28 @@
+{
+    "code-runner.executorMap": {
+        "python": "C:\\ProgramData\\Anaconda3\\python.exe",
+    },
+    "files.autoSave": "onFocusChange",
+    "files.autoSaveDelay": 200,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "workbench.sideBar.location": "left",
+    "editor.minimap.enabled": true,
+    "window.zoomLevel": 0,
+    "editor.accessibilitySupport": "off",
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.pep8Args": ["--max-line-length=120"],
+    "editor.rulers": [80,120],
+    "pythonTestExplorer.testFramework": "pytest",
+    "python.testing.pytestEnabled": false,
+    "python.formatting.provider": "yapf",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "files.associations": {
+        ".style.yapf": "shellscript"
+    },
+    "code-runner.respectShebang": false
+    
+}
