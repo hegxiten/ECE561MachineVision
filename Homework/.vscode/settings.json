@@ -11,8 +11,9 @@
     "window.zoomLevel": 0,
     "editor.accessibilitySupport": "off",
     "python.linting.pylintEnabled": true,
+    
     "python.linting.flake8Enabled": false,
-    "python.linting.pep8Args": ["--max-line-length=120"],
+    "python.linting.pycodestyleArgs": ["--max-line-length=120"],
     "editor.rulers": [80,120],
     "pythonTestExplorer.testFramework": "pytest",
     "python.testing.pytestEnabled": false,
