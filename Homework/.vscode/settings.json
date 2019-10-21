@@ -11,7 +11,6 @@
     "window.zoomLevel": 0,
     "editor.accessibilitySupport": "off",
     "python.linting.pylintEnabled": true,
-    "python.linting.pylintArgs": ["--extension-pkg-whitelist=cv2"],
     "python.linting.flake8Enabled": false,
     "python.linting.pycodestyleArgs": ["--max-line-length=120"],
     "editor.rulers": [80,120],
