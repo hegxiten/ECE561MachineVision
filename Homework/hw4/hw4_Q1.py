@@ -86,7 +86,7 @@ if __name__ == "__main__":
         A_col_3 = img_coords_B[:,i][1]*CB.m_2_T-CB.m_1_T
         A = np.stack((A_col_0,A_col_1,A_col_2,A_col_3),axis=0)
         b = A[:, -1].copy()
-        x = x = np.linalg.lstsq(A[:, :-1], -b)[0]
+        x = np.linalg.lstsq(A[:, :-1], -b)[0]
         x = np.r_[x,1]
         reconstructed_points.append(x)
     reprojected_pts_4by1 = np.array(reconstructed_points).T
