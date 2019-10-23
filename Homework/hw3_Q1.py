@@ -42,7 +42,7 @@ house_coords = np.column_stack([n[1] for n in coords])
 
 M_int = np.array([[100,    0,  200],
                   [   0, 100,  200],
-                  [   0,    0,    1]])
+                  [   0,    0,   1]])
 
 Rc_0 = rotation_matrix_C(0, 0, 0)
 C_0 = np.array([[0, 0, -10]])
@@ -69,7 +69,8 @@ P = np.append(house_coords, [np.ones((house_coords.shape[1]),  dtype=house_coord
 
 proj_cords = [np.matmul(M_int, np.matmul(x, P)) for x in [M_ext_0, M_ext_1, M_ext_2, M_ext_3, M_ext_4]]
 pixel_cords = [np.divide(x, x[2])[:-1] for x in proj_cords]
-
+print(np.matmul(M_int, M_ext_0))
+print(pixel_cords[0])
 # draw the five views using matplotlib with keyboard interrupt
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D

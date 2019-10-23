@@ -3,14 +3,12 @@
         "python": "C:\\ProgramData\\Anaconda3\\python.exe",
     },
     "files.autoSave": "onFocusChange",
-    "files.autoSaveDelay": 200,
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     "python.dataScience.sendSelectionToInteractiveWindow": true,
     "workbench.sideBar.location": "left",
     "editor.minimap.enabled": true,
     "window.zoomLevel": 0,
     "editor.accessibilitySupport": "off",
-    "python.linting.pylintEnabled": true,
     "python.linting.flake8Enabled": false,
     "python.linting.pycodestyleArgs": ["--max-line-length=120"],
     "editor.rulers": [80,120],
@@ -23,6 +21,9 @@
     "files.associations": {
         ".style.yapf": "shellscript"
     },
-    "code-runner.respectShebang": false
+    "code-runner.respectShebang": false,
+    "python.linting.enabled": true,
+    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe",
+    "python.linting.pylintEnabled": true
     
 }
