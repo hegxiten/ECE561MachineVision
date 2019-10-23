@@ -40,9 +40,10 @@ for (node, node_coords) in coords:
 
 house_coords = np.column_stack([n[1] for n in coords])
 
-M_int = np.array([[100,    0,  200],
+M_int = np.array([[-100,   0,  200],
                   [   0, 100,  200],
                   [   0,    0,   1]])
+# refer to http://ksimek.github.io/2012/08/14/decompose/
 
 Rc_0 = rotation_matrix_C(0, 0, 0)
 C_0 = np.array([[0, 0, -10]])
@@ -89,7 +90,7 @@ for view in pixel_cords:
                 Line2D([projected_dict[v][0], projected_dict[p][0]],
                        [projected_dict[v][1], projected_dict[p][1]]))
             ax.add_line(projected_lines[-1])
-    ax.axis([100, 400, 100, 400])
+    ax.autoscale(enable = True)
     plt.draw()
 
     plt.waitforbuttonpress(0)
