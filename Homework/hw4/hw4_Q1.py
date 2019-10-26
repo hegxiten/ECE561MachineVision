@@ -68,9 +68,9 @@ if __name__ == "__main__":
     Rcs = [rotation_matrix_C(0, 3*np.pi/4, 0), rotation_matrix_C(-np.pi/2, 0, 0)]
     Centers = [np.array([[-np.sqrt(10), 0, 7+np.sqrt(10)]]), np.array([[0, -10,  0]])]
 
-    M_int = np.array([  [100,    0,  200],
+    M_int = np.array([  [-100,   0,  200],
                         [   0, 100,  200],
-                        [   0,    0,    1]])
+                        [   0,   0,    1]])
 
     three_chosen_pts_4by1 = np.append(three_chosen_points, [np.ones((three_chosen_points.shape[1]),  dtype=house_coords.dtype)], 0)
     CA = Camera(Rc=Rcs[0],C=Centers[0], M_int=M_int)
@@ -99,6 +99,8 @@ if __name__ == "__main__":
     sq_sum_A = sum([error_A[:,i][0]**2+error_A[:,i][1]**2 for i in range(3)])
     sq_sum_B = sum([error_B[:,i][0]**2+error_B[:,i][1]**2 for i in range(3)])
 
+    # Question 1: Reprojection errors and so on:
+
     print("\nSelected camera: (intrinsic matrix, same camera at two different locations)")
     print(M_int)
     print("Corresponding two extrinsic locations: (extrinsic matrix)")
@@ -118,5 +120,3 @@ if __name__ == "__main__":
     print(sq_sum_A)
     print("Reprojection Error sum of square for each selected point at Camera B")
     print(sq_sum_B)
-    
-    

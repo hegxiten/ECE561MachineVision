@@ -66,12 +66,11 @@ C_4 = np.array([[0, 15,  0]])
 M_ext_4 = np.append(Rc_4.T, -np.dot(Rc_4.T, C_4.T), axis=1)
 
 # augmented P matrix with extra "1" as the fourth component:
-P = np.append(house_coords, [np.ones((house_coords.shape[1]),  dtype=house_coords.dtype)], 0)
+P = np.append(house_coords, [np.ones((house_coords.shape[1]),  dtype=house_coords.dtype)], axis=0)
 
 proj_cords = [np.matmul(M_int, np.matmul(x, P)) for x in [M_ext_0, M_ext_1, M_ext_2, M_ext_3, M_ext_4]]
 pixel_cords = [np.divide(x, x[2])[:-1] for x in proj_cords]
-print(np.matmul(M_int, M_ext_0))
-print(pixel_cords[0])
+
 # draw the five views using matplotlib with keyboard interrupt
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
