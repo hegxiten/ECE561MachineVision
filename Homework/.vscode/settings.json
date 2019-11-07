@@ -23,7 +23,7 @@
     },
     "code-runner.respectShebang": false,
     "python.linting.enabled": true,
-    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe",
+    "python.pythonPath": "C:\\Users\\wangz\\AppData\\Local\\Continuum\\anaconda3\\python.exe",
     "python.linting.pylintEnabled": true
     
 }
