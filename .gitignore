@@ -1,0 +1,31 @@
+# pycharm configs
+.idea/
+
+# eclipse configs
+.settings/
+.settings/*
+*.project
+*.pydevproject
+
+# vim temp files
+*.swo
+*.swp
+
+# pytest cache files
+.pytest_cache/
+
+# yapf config file
+.style.yapf
+
+*.pyc
+*.pdf
+*.DS_Store
+*.gpickle
+
+*.jpg
+*.zip
+
+venv/
+/Document/
+__pycache__/
+DES/test.py
