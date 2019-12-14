@@ -21,8 +21,11 @@
 *.DS_Store
 *.gpickle
 
+/FinalProject/Q2/fruits/fruits-360_dataset/fruits-360/
+/FinalProject/Images/
 /Homework/hw5/dogs-vs-cats
 venv/
 /Document/
 __pycache__/
 DES/test.py
+FinalProject/Q2/fruits.zip
