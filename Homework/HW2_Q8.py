@@ -31,7 +31,7 @@ H = L.reshape(3, 3)
 print("Homography Matrix:")
 print(H)
 # warpping the source image to the output
-im_out = cv2.warpPerspective(img_side, h, (img_front.shape[1],img_front.shape[0]))
+im_out = cv2.warpPerspective(img_side, H, (img_front.shape[1],img_front.shape[0]))
 # display images with reduced size 720*540
 im_to_show = cv2.resize(im_out, (720,540))
 cv2.imshow("warpped", im_to_show)
