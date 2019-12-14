@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes"?>
 <!-- SVG graphic -->
 <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
-width="110px" height="110px" preserveAspectRatio="xMinYMin meet" viewBox="0 0 110 110" version="1.1">
+width="60px" height="60px" preserveAspectRatio="xMinYMin meet" viewBox="0 0 60 60" version="1.1">
 <rect x="5" y="0" width="2.5" height="2.5" fill="blue"/>
 <rect x="10" y="0" width="2.5" height="2.5" fill="blue"/>
 <rect x="15" y="0" width="2.5" height="2.5" fill="blue"/>
@@ -38,10 +38,10 @@ width="110px" height="110px" preserveAspectRatio="xMinYMin meet" viewBox="0 0 11
 <rect x="35" y="30" width="2.5" height="2.5" fill="blue"/>
 <rect x="40" y="30" width="2.5" height="2.5" fill="blue"/>
 <rect x="40" y="35" width="2.5" height="2.5" fill="blue"/>
-<text x="100" y="5" font-size="5" fill="black">0</text>
-<text x="100" y="90" font-size="5" fill="black">19</text>
-<polyline points="100,10,100,85" stroke="black" stroke-width="1" fill="none"/>
-<text x="5" y="100" font-size="5" fill="black">0</text>
-<text x="90" y="100" font-size="5" fill="black">19</text>
-<polyline points="10,100,85,100" stroke="black" stroke-width="1" fill="none"/>
+<text x="50" y="5" font-size="5" fill="black">0</text>
+<text x="50" y="40" font-size="5" fill="black">9</text>
+<polyline points="50,10,50,35" stroke="black" stroke-width="1" fill="none"/>
+<text x="5" y="50" font-size="5" fill="black">0</text>
+<text x="40" y="50" font-size="5" fill="black">9</text>
+<polyline points="10,50,35,50" stroke="black" stroke-width="1" fill="none"/>
 </svg>
