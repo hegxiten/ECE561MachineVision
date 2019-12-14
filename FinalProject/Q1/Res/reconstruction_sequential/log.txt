@@ -1,0 +1,749 @@
+C:\Users\wangz\Documents\GitHub\build\openMVG\software\SfM>python SfM_SequentialPipeline.py C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Images C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Res
+Using input dir  :  C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Images
+      output_dir :  C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Res
+1. Intrinsics analysis
+ You called :
+C:/Users/wangz/Documents/GitHub/build/openMVG/Windows-AMD64-Release/Release\openMVG_main_SfMInit_ImageListing
+--imageDirectory C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Images
+--sensorWidthDatabase C:/Users/wangz/Documents/GitHub/openMVG/src/software/SfM/../../openMVG/exif/sensor_width_database\sensor_width_camera_database.txt
+--outputDirectory C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Res\matches
+--focal -1
+--intrinsics
+--camera_model 3
+--group_camera_model 1
+
+- Image listing -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+SfMInit_ImageListing report:
+listed #File(s): 17
+usable #File(s) listed in sfm_data: 17
+usable #Intrinsic(s) listed in sfm_data: 1
+2. Compute features
+ You called :
+C:/Users/wangz/Documents/GitHub/build/openMVG/Windows-AMD64-Release/Release\openMVG_main_ComputeFeatures
+--input_file C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Res\matches/sfm_data.json
+--outdir C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Res\matches
+--describerMethod SIFT
+--upright 0
+--describerPreset NORMAL
+--force 0
+--numThreads 0
+
+
+- EXTRACT FEATURES -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Task done in (s): 0
+3. Compute matches
+ You called :
+C:/Users/wangz/Documents/GitHub/build/openMVG/Windows-AMD64-Release/Release\openMVG_main_ComputeMatches
+--input_file C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Res\matches/sfm_data.json
+--out_dir C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Res\matches
+Optional parameters:
+--force 0
+--ratio 0.8
+--geometric_model f
+--video_mode_matching -1
+--pair_list
+--nearest_matching_method AUTO
+--guided_matching 0
+--cache_size unlimited
+
+- Regions Loading -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+ - PUTATIVE MATCHES -
+         PREVIOUS RESULTS LOADED; #pair: 136
+'neato' is not recognized as an internal or external command,
+operable program or batch file.
+
+- Geometric filtering -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Task done in (s): 0
+
+ Export Adjacency Matrix of the pairwise's geometric matches
+'neato' is not recognized as an internal or external command,
+operable program or batch file.
+4. Do Sequential/Incremental reconstruction
+Sequential/Incremental reconstruction
+ Perform incremental SfM (Initial Pair Essential + Resection).
+
+
+- Features Loading -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+Track building
+
+Track filtering
+
+Track export to internal struct
+
+Track stats
+------------------
+-- Tracks Stats --
+ Tracks number: 9439
+ Images Id:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+------------------
+TrackLength, Occurrence
+        2       6885
+        3       983
+        4       661
+        5       318
+        6       252
+        7       114
+        8       97
+        9       43
+        10      29
+        11      27
+        12      12
+        13      7
+        14      8
+        15      3
+
+Automatic selection of an initial pair:
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+A-Contrario initial pair residual: 9.6586
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 2
+ #poses: 2
+ #intrinsics: 1
+ #tracks: 171
+ #residuals: 684
+ Initial RMSE: 0.420407
+ Final RMSE: 0.326482
+ Time (s): 0.003518
+
+
+=========================
+ MSE Residual InitialPair Inlier:
+
+
+
+SequentialSfMReconstructionEngine::ComputeResidualsMSE.
+        -- #Tracks:     171
+        -- Residual min:        1.73702e-05
+        -- Residual median:     0.0664627
+        -- Residual max:         3.57918
+        -- Residual mean:        0.236202
+=========================
+
+-------------------------------
+-- Robust Resection of view: 7
+  nfa=-741.257 inliers=142/149 precisionNormalized=9.4498e-07 precision=2.69278 (iter=0 ,sample=103,51,115,)
+  nfa=-762.333 inliers=144/149 precisionNormalized=8.23045e-07 precision=2.51305 (iter=4 ,sample=17,120,107,)
+  nfa=-777.38 inliers=145/149 precisionNormalized=7.07525e-07 precision=2.33002 (iter=34 ,sample=148,100,68,)
+  nfa=-782.285 inliers=144/149 precisionNormalized=5.61025e-07 precision=2.07482 (iter=49 ,sample=47,124,77,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 149
+-- #Points validated by robust Resection: 144
+-- Threshold: 2.07482
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 144
+ #residuals: 288
+ Initial RMSE: 0.427257
+ Final RMSE: 0.395074
+ Time (s): 0.0004929
+
+
+-------------------------------
+-- Robust Resection of view: 6
+  nfa=-783.336 inliers=398/434 precisionNormalized=0.00229214 precision=132.62 (iter=0 ,sample=246,6,112,)
+  nfa=-2131.18 inliers=415/434 precisionNormalized=1.56082e-06 precision=3.46071 (iter=1 ,sample=336,291,118,)
+  nfa=-2214.43 inliers=410/434 precisionNormalized=7.52392e-07 precision=2.40277 (iter=39 ,sample=60,175,374,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 434
+-- #Points validated by robust Resection: 410
+-- Threshold: 2.40277
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 410
+ #residuals: 820
+ Initial RMSE: 0.466965
+ Final RMSE: 0.443908
+ Time (s): 0.0013585
+
+
+-------------------------------
+-- Robust Resection of view: 4
+  nfa=-277.116 inliers=394/415 precisionNormalized=0.0476797 precision=604.862 (iter=0 ,sample=87,169,311,)
+  nfa=-604.539 inliers=403/415 precisionNormalized=0.00811339 precision=249.511 (iter=0 ,sample=87,169,311,)
+  nfa=-728.508 inliers=412/415 precisionNormalized=0.0047777 precision=191.469 (iter=0 ,sample=87,169,311,)
+  nfa=-1602.1 inliers=410/415 precisionNormalized=3.25559e-05 precision=15.8053 (iter=0 ,sample=87,169,311,)
+  nfa=-1988.87 inliers=402/415 precisionNormalized=2.58457e-06 precision=4.45332 (iter=2 ,sample=205,325,283,)
+  nfa=-1989.54 inliers=395/415 precisionNormalized=1.94739e-06 precision=3.86559 (iter=18 ,sample=302,216,211,)
+  nfa=-2015.69 inliers=386/415 precisionNormalized=1.13112e-06 precision=2.94607 (iter=41 ,sample=334,13,278,)
+  nfa=-2020.23 inliers=399/415 precisionNormalized=1.89259e-06 precision=3.81081 (iter=79 ,sample=163,177,165,)
+  nfa=-2037.67 inliers=397/415 precisionNormalized=1.56365e-06 precision=3.46385 (iter=205 ,sample=36,190,223,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 415
+-- #Points validated by robust Resection: 397
+-- Threshold: 3.46385
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 397
+ #residuals: 794
+ Initial RMSE: 0.721296
+ Final RMSE: 0.669218
+ Time (s): 0.0009506
+
+
+-------------------------------
+-- Robust Resection of view: 8
+  nfa=-259.595 inliers=203/462 precisionNormalized=0.00299913 precision=151.7 (iter=0 ,sample=50,174,236,)
+  nfa=-1909.33 inliers=454/462 precisionNormalized=1.60664e-05 precision=11.1032 (iter=0 ,sample=50,174,236,)
+  nfa=-2178.68 inliers=453/462 precisionNormalized=3.83683e-06 precision=5.42595 (iter=1 ,sample=395,361,302,)
+  nfa=-2190.54 inliers=451/462 precisionNormalized=3.3609e-06 precision=5.07829 (iter=2 ,sample=288,80,250,)
+  nfa=-2256.22 inliers=442/462 precisionNormalized=1.70283e-06 precision=3.61473 (iter=4 ,sample=233,269,390,)
+  nfa=-2310.2 inliers=443/462 precisionNormalized=1.30261e-06 precision=3.16153 (iter=12 ,sample=394,239,329,)
+  nfa=-2310.6 inliers=441/462 precisionNormalized=1.2034e-06 precision=3.03875 (iter=35 ,sample=338,156,284,)
+  nfa=-2325.33 inliers=433/462 precisionNormalized=8.0148e-07 precision=2.47991 (iter=42 ,sample=276,33,48,)
+  nfa=-2339.53 inliers=439/462 precisionNormalized=9.38738e-07 precision=2.68387 (iter=118 ,sample=364,284,461,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 462
+-- #Points validated by robust Resection: 439
+-- Threshold: 2.68387
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 439
+ #residuals: 878
+ Initial RMSE: 0.540468
+ Final RMSE: 0.501427
+ Time (s): 0.0010592
+
+
+-------------------------------
+-- Robust Resection of view: 5
+  nfa=-5553.63 inliers=1103/1138 precisionNormalized=2.29363e-06 precision=4.19519 (iter=1 ,sample=417,86,1057,)
+  nfa=-5820.1 inliers=1087/1138 precisionNormalized=9.78362e-07 precision=2.73993 (iter=2 ,sample=717,45,537,)
+  nfa=-5822.02 inliers=1078/1138 precisionNormalized=8.40518e-07 precision=2.53959 (iter=206 ,sample=636,388,154,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 1138
+-- #Points validated by robust Resection: 1078
+-- Threshold: 2.53959
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 1078
+ #residuals: 2156
+ Initial RMSE: 0.515057
+ Final RMSE: 0.499961
+ Time (s): 0.0018811
+
+
+-------------------------------
+-- Robust Resection of view: 2
+  nfa=-543.535 inliers=656/1047 precisionNormalized=0.0156862 precision=346.935 (iter=0 ,sample=455,423,881,)
+  nfa=-4567.51 inliers=989/1047 precisionNormalized=5.64897e-06 precision=6.58376 (iter=0 ,sample=455,423,881,)
+  nfa=-4666.88 inliers=999/1047 precisionNormalized=5.14844e-06 precision=6.28532 (iter=11 ,sample=896,161,742,)
+  nfa=-4705.77 inliers=996/1047 precisionNormalized=4.49486e-06 precision=5.87283 (iter=62 ,sample=346,803,45,)
+  nfa=-4721.24 inliers=1005/1047 precisionNormalized=4.93941e-06 precision=6.1564 (iter=121 ,sample=763,980,643,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 1047
+-- #Points validated by robust Resection: 1005
+-- Threshold: 6.1564
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 1005
+ #residuals: 2010
+ Initial RMSE: 1.43952
+ Final RMSE: 1.19804
+ Time (s): 0.0022844
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 17
+ #poses: 8
+ #intrinsics: 1
+ #tracks: 2585
+ #residuals: 17906
+ Initial RMSE: 0.598449
+ Final RMSE: 0.369046
+ Time (s): 0.216794
+
+
+-------------------------------
+-- Robust Resection of view: 0
+  nfa=-675.703 inliers=485/505 precisionNormalized=0.0101238 precision=282.217 (iter=0 ,sample=457,295,375,)
+  nfa=-1904.69 inliers=499/505 precisionNormalized=4.10365e-05 precision=17.9679 (iter=1 ,sample=251,356,201,)
+  nfa=-2350.12 inliers=486/505 precisionNormalized=3.38513e-06 precision=5.1606 (iter=2 ,sample=92,318,472,)
+  nfa=-2362.76 inliers=490/505 precisionNormalized=3.60668e-06 precision=5.3268 (iter=44 ,sample=284,166,345,)
+  nfa=-2378.9 inliers=477/505 precisionNormalized=2.19829e-06 precision=4.15868 (iter=52 ,sample=257,113,332,)
+  nfa=-2382.17 inliers=482/505 precisionNormalized=2.54162e-06 precision=4.47165 (iter=108 ,sample=478,194,315,)
+  nfa=-2385.65 inliers=479/505 precisionNormalized=2.26655e-06 precision=4.22275 (iter=133 ,sample=117,490,115,)
+  nfa=-2392.37 inliers=484/505 precisionNormalized=2.57509e-06 precision=4.501 (iter=271 ,sample=410,372,323,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 505
+-- #Points validated by robust Resection: 484
+-- Threshold: 4.501
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 484
+ #residuals: 968
+ Initial RMSE: 0.972198
+ Final RMSE: 0.851312
+ Time (s): 0.0011978
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 17
+ #poses: 9
+ #intrinsics: 1
+ #tracks: 2800
+ #residuals: 19864
+ Initial RMSE: 0.416617
+ Final RMSE: 0.383139
+ Time (s): 0.189645
+
+
+-------------------------------
+-- Robust Resection of view: 1
+  nfa=-1455.52 inliers=441/447 precisionNormalized=0.000133616 precision=32.4667 (iter=0 ,sample=401,309,96,)
+  nfa=-1810.35 inliers=434/447 precisionNormalized=1.65296e-05 precision=11.4193 (iter=1 ,sample=84,122,341,)
+  nfa=-2102.89 inliers=420/447 precisionNormalized=2.02671e-06 precision=3.99857 (iter=2 ,sample=328,163,295,)
+  nfa=-2118.61 inliers=418/447 precisionNormalized=1.71401e-06 precision=3.67719 (iter=8 ,sample=283,432,182,)
+  nfa=-2146.16 inliers=408/447 precisionNormalized=9.75322e-07 precision=2.77385 (iter=11 ,sample=19,382,165,)
+  nfa=-2173.59 inliers=420/447 precisionNormalized=1.33318e-06 precision=3.24304 (iter=20 ,sample=428,172,24,)
+  nfa=-2181.01 inliers=409/447 precisionNormalized=8.12632e-07 precision=2.53196 (iter=23 ,sample=285,401,99,)
+  nfa=-2189.96 inliers=413/447 precisionNormalized=9.08199e-07 precision=2.6767 (iter=30 ,sample=383,108,44,)
+  nfa=-2193.35 inliers=414/447 precisionNormalized=9.26688e-07 precision=2.70381 (iter=96 ,sample=175,9,418,)
+  nfa=-2203.78 inliers=419/447 precisionNormalized=1.06616e-06 precision=2.90015 (iter=129 ,sample=136,158,71,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 447
+-- #Points validated by robust Resection: 419
+-- Threshold: 2.90015
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 419
+ #residuals: 838
+ Initial RMSE: 0.587502
+ Final RMSE: 0.536788
+ Time (s): 0.0010374
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 17
+ #poses: 10
+ #intrinsics: 1
+ #tracks: 2883
+ #residuals: 21078
+ Initial RMSE: 0.390467
+ Final RMSE: 0.382715
+ Time (s): 0.159486
+
+
+-------------------------------
+-- Robust Resection of view: 10
+  nfa=-152.408 inliers=92/194 precisionNormalized=0.00114738 precision=95.1709 (iter=0 ,sample=50,165,112,)
+  nfa=-514.69 inliers=180/194 precisionNormalized=0.000267154 precision=45.9231 (iter=0 ,sample=50,165,112,)
+  nfa=-780.719 inliers=186/194 precisionNormalized=1.28662e-05 precision=10.078 (iter=2 ,sample=80,69,101,)
+  nfa=-805.724 inliers=184/194 precisionNormalized=8.0582e-06 precision=7.97571 (iter=4 ,sample=8,49,65,)
+  nfa=-814.297 inliers=184/194 precisionNormalized=7.21335e-06 precision=7.54604 (iter=5 ,sample=43,147,99,)
+  nfa=-814.88 inliers=186/194 precisionNormalized=8.32944e-06 precision=8.10883 (iter=13 ,sample=129,64,31,)
+  nfa=-820.546 inliers=176/194 precisionNormalized=3.54613e-06 precision=5.29088 (iter=149 ,sample=114,120,135,)
+  nfa=-821.261 inliers=171/194 precisionNormalized=2.31152e-06 precision=4.27169 (iter=305 ,sample=140,71,22,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 194
+-- #Points validated by robust Resection: 171
+-- Threshold: 4.27169
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 171
+ #residuals: 342
+ Initial RMSE: 0.899918
+ Final RMSE: 0.885243
+ Time (s): 0.000677
+
+
+-------------------------------
+-- Robust Resection of view: 11
+  nfa=-49.1587 inliers=99/239 precisionNormalized=0.0153308 precision=347.882 (iter=0 ,sample=184,1,31,)
+  nfa=-367.055 inliers=175/239 precisionNormalized=0.000940683 precision=86.1732 (iter=0 ,sample=184,1,31,)
+  nfa=-728.322 inliers=230/239 precisionNormalized=0.000152639 precision=34.7123 (iter=1 ,sample=185,205,68,)
+  nfa=-941.116 inliers=203/239 precisionNormalized=3.32809e-06 precision=5.12564 (iter=3 ,sample=42,58,63,)
+  nfa=-948.463 inliers=208/239 precisionNormalized=4.26286e-06 precision=5.80097 (iter=5 ,sample=148,31,27,)
+  nfa=-967.462 inliers=218/239 precisionNormalized=6.50898e-06 precision=7.16815 (iter=17 ,sample=39,203,128,)
+  nfa=-976.687 inliers=214/239 precisionNormalized=4.5662e-06 precision=6.00382 (iter=18 ,sample=111,32,113,)
+  nfa=-984.538 inliers=207/239 precisionNormalized=2.61645e-06 precision=4.54471 (iter=23 ,sample=108,175,60,)
+  nfa=-985.805 inliers=206/239 precisionNormalized=2.40407e-06 precision=4.35636 (iter=43 ,sample=18,85,128,)
+  nfa=-989.158 inliers=221/239 precisionNormalized=6.1983e-06 precision=6.99499 (iter=63 ,sample=81,136,74,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 239
+-- #Points validated by robust Resection: 221
+-- Threshold: 6.99499
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 221
+ #residuals: 442
+ Initial RMSE: 1.53139
+ Final RMSE: 1.3547
+ Time (s): 0.0006763
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 17
+ #poses: 12
+ #intrinsics: 1
+ #tracks: 3094
+ #residuals: 22862
+ Initial RMSE: 0.431279
+ Final RMSE: 0.408104
+ Time (s): 0.195252
+
+
+-------------------------------
+-- Robust Resection of view: 12
+  nfa=-0.311939 inliers=22/195 precisionNormalized=0.00447964 precision=188.192 (iter=0 ,sample=182,59,188,)
+  nfa=-142.248 inliers=166/195 precisionNormalized=0.0231571 precision=427.88 (iter=0 ,sample=182,59,188,)
+  nfa=-665.43 inliers=175/195 precisionNormalized=2.65433e-05 precision=14.4863 (iter=1 ,sample=78,129,95,)
+  nfa=-765.421 inliers=184/195 precisionNormalized=1.332e-05 precision=10.262 (iter=2 ,sample=79,28,5,)
+  nfa=-775.476 inliers=183/195 precisionNormalized=1.08876e-05 precision=9.27784 (iter=10 ,sample=15,130,68,)
+  nfa=-784.763 inliers=174/195 precisionNormalized=4.87959e-06 precision=6.21115 (iter=12 ,sample=145,52,78,)
+  nfa=-797.716 inliers=176/195 precisionNormalized=4.78111e-06 precision=6.14815 (iter=13 ,sample=72,5,99,)
+  nfa=-802.667 inliers=173/195 precisionNormalized=3.51199e-06 precision=5.26935 (iter=145 ,sample=177,129,106,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 195
+-- #Points validated by robust Resection: 173
+-- Threshold: 5.26935
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 173
+ #residuals: 346
+ Initial RMSE: 1.3069
+ Final RMSE: 1.21645
+ Time (s): 0.0004979
+
+
+-------------------------------
+-- Robust Resection of view: 13
+  nfa=-79.6397 inliers=220/269 precisionNormalized=0.0696834 precision=742.241 (iter=0 ,sample=163,31,7,)
+  nfa=-987.037 inliers=262/269 precisionNormalized=4.00581e-05 precision=17.7961 (iter=0 ,sample=163,31,7,)
+  nfa=-1035.63 inliers=247/269 precisionNormalized=1.21444e-05 precision=9.7987 (iter=1 ,sample=152,214,263,)
+  nfa=-1048.43 inliers=240/269 precisionNormalized=7.39088e-06 precision=7.64414 (iter=3 ,sample=126,254,198,)
+  nfa=-1080.69 inliers=251/269 precisionNormalized=9.77886e-06 precision=8.79275 (iter=9 ,sample=219,221,57,)
+  nfa=-1137.5 inliers=243/269 precisionNormalized=3.63045e-06 precision=5.35748 (iter=14 ,sample=200,260,245,)
+  nfa=-1153.57 inliers=243/269 precisionNormalized=3.09469e-06 precision=4.9464 (iter=56 ,sample=210,208,50,)
+  nfa=-1156.29 inliers=242/269 precisionNormalized=2.83737e-06 precision=4.73629 (iter=247 ,sample=68,180,122,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 269
+-- #Points validated by robust Resection: 242
+-- Threshold: 4.73629
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 242
+ #residuals: 484
+ Initial RMSE: 0.980141
+ Final RMSE: 0.898884
+ Time (s): 0.0004862
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 17
+ #poses: 14
+ #intrinsics: 1
+ #tracks: 3417
+ #residuals: 25158
+ Initial RMSE: 0.451777
+ Final RMSE: 0.418953
+ Time (s): 0.244968
+
+
+-------------------------------
+-- Robust Resection of view: 14
+  nfa=-189.889 inliers=140/165 precisionNormalized=0.00692336 precision=233.424 (iter=0 ,sample=17,91,145,)
+  nfa=-383.083 inliers=156/165 precisionNormalized=0.000706731 precision=74.5784 (iter=1 ,sample=24,56,146,)
+  nfa=-461.483 inliers=139/165 precisionNormalized=6.68351e-05 precision=22.9345 (iter=3 ,sample=7,38,47,)
+  nfa=-585.993 inliers=138/165 precisionNormalized=7.31177e-06 precision=7.58573 (iter=4 ,sample=49,67,15,)
+  nfa=-590.294 inliers=150/165 precisionNormalized=1.92517e-05 precision=12.3089 (iter=8 ,sample=80,32,65,)
+  nfa=-594.856 inliers=139/165 precisionNormalized=6.88074e-06 precision=7.35874 (iter=12 ,sample=147,102,56,)
+  nfa=-607.675 inliers=140/165 precisionNormalized=6.05799e-06 precision=6.90479 (iter=23 ,sample=125,32,45,)
+  nfa=-611.004 inliers=139/165 precisionNormalized=5.20626e-06 precision=6.40102 (iter=26 ,sample=102,128,54,)
+  nfa=-618.571 inliers=140/165 precisionNormalized=5.02433e-06 precision=6.28819 (iter=56 ,sample=92,140,161,)
+  nfa=-620.006 inliers=133/165 precisionNormalized=2.42978e-06 precision=4.3729 (iter=253 ,sample=27,58,12,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 165
+-- #Points validated by robust Resection: 133
+-- Threshold: 4.3729
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 133
+ #residuals: 266
+ Initial RMSE: 1.01262
+ Final RMSE: 0.949836
+ Time (s): 0.0005704
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 17
+ #poses: 15
+ #intrinsics: 1
+ #tracks: 3587
+ #residuals: 26246
+ Initial RMSE: 0.428709
+ Final RMSE: 0.419272
+ Time (s): 0.223209
+
+
+-------------------------------
+-- Robust Resection of view: 15
+  nfa=-20.914 inliers=34/67 precisionNormalized=0.0102526 precision=283.907 (iter=0 ,sample=66,37,16,)
+  nfa=-239.566 inliers=65/67 precisionNormalized=2.94776e-05 precision=15.2232 (iter=0 ,sample=66,37,16,)
+  nfa=-252.043 inliers=59/67 precisionNormalized=4.93037e-06 precision=6.22585 (iter=8 ,sample=15,11,8,)
+  nfa=-255.175 inliers=61/67 precisionNormalized=6.88375e-06 precision=7.3565 (iter=239 ,sample=13,42,60,)
+  nfa=-257.12 inliers=62/67 precisionNormalized=7.97358e-06 precision=7.91745 (iter=330 ,sample=14,39,49,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 67
+-- #Points validated by robust Resection: 62
+-- Threshold: 7.91745
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 62
+ #residuals: 124
+ Initial RMSE: 1.86424
+ Final RMSE: 1.66962
+ Time (s): 0.0003614
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 17
+ #poses: 16
+ #intrinsics: 1
+ #tracks: 3629
+ #residuals: 26540
+ Initial RMSE: 0.426401
+ Final RMSE: 0.418666
+ Time (s): 0.229262
+
+
+-------------------------------
+-- Robust Resection of view: 16
+  nfa=-0.532614 inliers=9/14 precisionNormalized=0.0185871 precision=382.055 (iter=0 ,sample=8,2,4,)
+  nfa=-22.2373 inliers=14/14 precisionNormalized=0.00125605 precision=99.317 (iter=0 ,sample=8,2,4,)
+  nfa=-30.0063 inliers=12/14 precisionNormalized=3.21117e-05 precision=15.88 (iter=1 ,sample=8,12,13,)
+  nfa=-33.1108 inliers=11/14 precisionNormalized=3.52203e-06 precision=5.25916 (iter=2 ,sample=6,11,7,)
+  nfa=-33.1943 inliers=11/14 precisionNormalized=3.4355e-06 precision=5.19415 (iter=36 ,sample=4,2,13,)
+  nfa=-35.4827 inliers=11/14 precisionNormalized=1.72054e-06 precision=3.67581 (iter=145 ,sample=11,13,7,)
+  nfa=-35.4827 inliers=11/14 precisionNormalized=1.72054e-06 precision=3.67581 (iter=159 ,sample=13,11,7,)
+
+-------------------------------
+-- Robust Resection
+-- Resection status: 1
+-- #Points used for Resection: 14
+-- #Points validated by robust Resection: 11
+-- Threshold: 3.67581
+-------------------------------
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 1
+ #poses: 1
+ #intrinsics: 1
+ #tracks: 11
+ #residuals: 22
+ Initial RMSE: 1.26447
+ Final RMSE: 1.19827
+ Time (s): 0.0002355
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 17
+ #poses: 17
+ #intrinsics: 1
+ #tracks: 3683
+ #residuals: 26798
+ Initial RMSE: 0.420097
+ Final RMSE: 0.416804
+ Time (s): 0.176683
+
+
+
+-------------------------------
+-- Structure from Motion (statistics):
+-- #Camera calibrated: 17 from 17 input images.
+-- #Tracks, #3D points: 3683
+-------------------------------
+
+
+
+SequentialSfMReconstructionEngine::ComputeResidualsMSE.
+        -- #Tracks:     3683
+        -- Residual min:        2.64465e-07
+        -- Residual median:     0.232962
+        -- Residual max:         3.96111
+        -- Residual mean:        0.38255
+
+Histogram of residuals:
+0       |       17863
+0.396   |       5344
+0.792   |       1941
+1.19    |       898
+1.58    |       409
+1.98    |       174
+2.38    |       91
+2.77    |       40
+3.17    |       28
+3.56    |       9
+3.96
+
+
+ Total Ac-Sfm took (s): 4
+...Generating SfM_Report.html
+...Export SfM_Data to disk.
+5. Colorize Structure
+
+Compute scene structure color
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+6. Structure from Known Poses (robust triangulation)
+Compute Structure from the provided poses
+
+- Regions Loading -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Loaded a sfm_data scene with:
+ #views: 17
+ #poses: 17
+ #intrinsics: 1
+ #tracks: 0
+=============================================================
+Robust triangulation of the tracks
+ - Triangulation of guided epipolar geometry matches
+=============================================================
+Compute pairwise fundamental guided matching:
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Per triplet tracks validation (discard spurious correspondences):
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Tracks to structure conversion:
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+****************************************************
+Structure estimation took (s): 0.
+
+#landmark found: 3895
+...Generating SfM_Report.html
+Found a sfm_data scene with:
+ #views: 17
+ #poses: 17
+ #intrinsics: 1
+ #tracks: 3895
+
+Compute scene structure color
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************

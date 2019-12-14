@@ -6,16 +6,16 @@ from matplotlib import pyplot as plt
 SRC_FILE = 'hw2_q8_side.jpg'
 DST_FILE = 'hw2_q8_front.jpg'
 
-img_side = cv2.imread(SRC_FILE, cv2.IMREAD_GRAYSCALE)          # SideView
-img_front = cv2.imread(DST_FILE, cv2.IMREAD_GRAYSCALE)         # FrontView
+img_1 = cv2.imread(SRC_FILE, cv2.IMREAD_GRAYSCALE)          # SideView
+img_2 = cv2.imread(DST_FILE, cv2.IMREAD_GRAYSCALE)         # FrontView
 
 # selecting four matching points from each view
 # stored it in src, dst respectively
-plt.imshow(img_side)
-src = side_keypoints = np.array(plt.ginput(4))
+plt.imshow(img_1)
+src = img_1_keypoints = np.array(plt.ginput(4))
 plt.close()
-plt.imshow(img_front)
-dst = front_keypoints = np.array(plt.ginput(4))
+plt.imshow(img_2)
+dst = img_2_keypoints = np.array(plt.ginput(4))
 plt.close()
 
 A = []
@@ -30,8 +30,11 @@ L = Vh[-1,:] / Vh[-1,-1]
 H = L.reshape(3, 3)
 print("Homography Matrix:")
 print(H)
+
+
+
 # warpping the source image to the output
-im_out = cv2.warpPerspective(img_side, H, (img_front.shape[1],img_front.shape[0]))
+im_out = cv2.warpPerspective(img_1, H, (img_2.shape[1], img_2.shape[0]))
 # display images with reduced size 720*540
 im_to_show = cv2.resize(im_out, (720,540))
 cv2.imshow("warpped", im_to_show)

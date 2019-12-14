@@ -1,0 +1,360 @@
+C:\Users\wangz\Documents\GitHub\build\openMVG\software\SfM>python SfM_GlobalPipeline.py C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Images C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Res
+Using input dir  :  C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Images
+      output_dir :  C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Res
+1. Intrinsics analysis
+ You called :
+C:/Users/wangz/Documents/GitHub/build/openMVG/Windows-AMD64-Release/Release\openMVG_main_SfMInit_ImageListing
+--imageDirectory C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Images
+--sensorWidthDatabase C:/Users/wangz/Documents/GitHub/openMVG/src/software/SfM/../../openMVG/exif/sensor_width_database\sensor_width_camera_database.txt
+--outputDirectory C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Res\matches
+--focal -1
+--intrinsics
+--camera_model 3
+--group_camera_model 1
+
+- Image listing -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+SfMInit_ImageListing report:
+listed #File(s): 17
+usable #File(s) listed in sfm_data: 17
+usable #Intrinsic(s) listed in sfm_data: 1
+2. Compute features
+ You called :
+C:/Users/wangz/Documents/GitHub/build/openMVG/Windows-AMD64-Release/Release\openMVG_main_ComputeFeatures
+--input_file C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Res\matches/sfm_data.json
+--outdir C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Res\matches
+--describerMethod SIFT
+--upright 0
+--describerPreset NORMAL
+--force 0
+--numThreads 0
+
+
+- EXTRACT FEATURES -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Task done in (s): 0
+3. Compute matches
+ You called :
+C:/Users/wangz/Documents/GitHub/build/openMVG/Windows-AMD64-Release/Release\openMVG_main_ComputeMatches
+--input_file C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Res\matches/sfm_data.json
+--out_dir C:\Users\wangz\Documents\GitHub\ECE561MachineVision\FinalProject\Q1\Res\matches
+Optional parameters:
+--force 0
+--ratio 0.8
+--geometric_model e
+--video_mode_matching -1
+--pair_list
+--nearest_matching_method AUTO
+--guided_matching 0
+--cache_size unlimited
+
+- Regions Loading -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+ - PUTATIVE MATCHES -
+         PREVIOUS RESULTS LOADED; #pair: 136
+'neato' is not recognized as an internal or external command,
+operable program or batch file.
+
+- Geometric filtering -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Task done in (s): 2
+
+ Export Adjacency Matrix of the pairwise's geometric matches
+'neato' is not recognized as an internal or external command,
+operable program or batch file.
+4. Do Global reconstruction
+
+-----------------------------------------------------------
+Global Structure from Motion:
+-----------------------------------------------------------
+Open Source implementation of the paper:
+"Global Fusion of Relative Motions for Robust, Accurate and Scalable Structure from Motion."
+Pierre Moulon, Pascal Monasse and Renaud Marlet.  ICCV 2013.
+------------------------------------------------------------
+
+- Features Loading -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+CleanGraph_KeepLargestBiEdge_Nodes():: => connected Component: 2
+Connected component of size: 1
+Connected component of size: 16
+
+- Relative pose computation -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Relative motion computation took: 3002(ms)
+'neato' is not recognized as an internal or external command,
+operable program or batch file.
+'neato' is not recognized as an internal or external command,
+operable program or batch file.
+
+-------------------------------
+ Global rotations computation:
+  #relative rotations: 62
+  #global rotations: 16
+
+Statistics about rotation triplets:
+
+         min: 0.0177983
+         mean: 0.4101
+         median: 0.32556
+         max: 2.57878
+0       |       16
+0.129   |       21
+0.258   |       31
+0.387   |       16
+0.516   |       14
+0.645   |       6
+0.774   |       3
+0.903   |       0
+1.03    |       3
+1.16    |       1
+1.29    |       2
+1.42    |       0
+1.55    |       0
+1.68    |       0
+1.81    |       0
+1.93    |       0
+2.06    |       0
+2.19    |       0
+2.32    |       0
+2.45    |       0
+2.58
+
+
+Triplets filtering based on composition error on unit cycles
+#Triplets before: 114
+#Triplets after: 114
+
+ #Edges removed by triplet inference: 0
+
+CleanGraph_KeepLargestBiEdge_Nodes():: => connected Component: 1
+Connected component of size: 16
+Found #global_rotations: 16
+Timing: 0 seconds
+
+Relative/Global degree rotations residual errors {0,1.0931}:
+0       |       14
+0.0547  |       8
+0.109   |       8
+0.164   |       7
+0.219   |       8
+0.273   |       5
+0.328   |       4
+0.383   |       2
+0.437   |       2
+0.492   |       1
+0.547   |       0
+0.601   |       0
+0.656   |       1
+0.711   |       0
+0.765   |       0
+0.82    |       0
+0.874   |       0
+0.929   |       0
+0.984   |       0
+1.04    |       1
+1.09
+
+
+Relative/Global degree rotations residual errors {0,5}:
+0       |       41
+0.25    |       17
+0.5     |       2
+0.75    |       0
+1       |       2
+1.25    |       0
+1.5     |       0
+1.75    |       0
+2       |       0
+2.25    |       0
+2.5     |       0
+2.75    |       0
+3       |       0
+3.25    |       0
+3.5     |       0
+3.75    |       0
+4       |       0
+4.25    |       0
+4.5     |       0
+4.75    |       0
+5
+
+
+Statistics about global rotation evaluation:
+
+         min: 0.0205151
+         mean: 0.219949
+         median: 0.176441
+         max: 1.0931
+'neato' is not recognized as an internal or external command,
+operable program or batch file.
+
+-------------------------------
+ Relative translations computation:
+-------------------------------
+#Triplets: 114
+
+Relative translations computation (edge coverage algorithm)
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+TRIPLET COVERAGE TIMING:
+-------------------------------
+-- #Relative triplet of translations estimates: 46 computed from 114 triplets.
+-- resulting in 138 translations estimation.
+-- time to compute triplets of relative translations: 0 seconds.
+-------------------------------
+
+CleanGraph_KeepLargestBiEdge_Nodes():: => connected Component: 1
+Connected component of size: 16
+
+-------------------------------
+ Global translations computation:
+   - Ready to compute 16 global translations.
+     from #relative translations: 138
+
+Track stats
+------------------
+-- Tracks Stats --
+ Tracks number: 2040
+ Images Id:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+------------------
+TrackLength, Occurrence
+        3       848
+        4       512
+        5       230
+        6       201
+        7       96
+        8       66
+        9       25
+        10      18
+        11      16
+        12      11
+        13      5
+        14      6
+        15      4
+        16      2
+
+Blind triangulation progress:
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+****************************************************
+#removed tracks (invalid triangulation): 3
+
+  Triangulation took (s): 0
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 17
+ #poses: 16
+ #intrinsics: 1
+ #tracks: 2037
+ #residuals: 18182
+ Initial RMSE: 10.8774
+ Final RMSE: 2.0203
+ Time (s): 1.13333
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 17
+ #poses: 16
+ #intrinsics: 1
+ #tracks: 2037
+ #residuals: 18182
+ Initial RMSE: 2.0203
+ Final RMSE: 1.31667
+ Time (s): 0.284108
+
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 17
+ #poses: 16
+ #intrinsics: 1
+ #tracks: 2037
+ #residuals: 18182
+ Initial RMSE: 1.31667
+ Final RMSE: 1.28719
+ Time (s): 0.246878
+
+Outlier removal (remaining #points):
+         initial structure size #3DPoints: 2037
+                 pixel residual filter  #3DPoints: 2024
+                 angular filter         #3DPoints: 1981
+
+Bundle Adjustment statistics (approximated RMSE):
+ #views: 17
+ #poses: 16
+ #intrinsics: 1
+ #tracks: 1981
+ #residuals: 17692
+ Initial RMSE: 0.466694
+ Final RMSE: 0.440057
+ Time (s): 0.182013
+
+
+ Total Ac-Global-Sfm took (s): 6
+...Generating SfM_Report.html
+...Export SfM_Data to disk.
+5. Colorize Structure
+
+Compute scene structure color
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+6. Structure from Known Poses (robust triangulation)
+Compute Structure from the provided poses
+
+- Regions Loading -
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Loaded a sfm_data scene with:
+ #views: 17
+ #poses: 16
+ #intrinsics: 1
+ #tracks: 0
+=============================================================
+Robust triangulation of the tracks
+ - Triangulation of guided epipolar geometry matches
+=============================================================
+Compute pairwise fundamental guided matching:
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Per triplet tracks validation (discard spurious correspondences):
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Tracks to structure conversion:
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+Structure estimation took (s): 0.
+
+#landmark found: 3971
+...Generating SfM_Report.html
+Found a sfm_data scene with:
+ #views: 17
+ #poses: 16
+ #intrinsics: 1
+ #tracks: 3971
+
+Compute scene structure color
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************

@@ -65,6 +65,7 @@ pixel_cords = [np.divide(x, x[2])[:-1] for x in proj_cords]
 
 # two image coordinates, shape = (2,10) for each
 img_L, img_R = pixel_cords[0].T, pixel_cords[1].T
+
 list_of_Nby9_input_arrays = []
 for i in range(img_L.shape[0]):
     r = np.append(

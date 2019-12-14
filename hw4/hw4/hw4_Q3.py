@@ -67,6 +67,7 @@ print(pixel_coords)
 # refer to http://ksimek.github.io/2012/08/14/decompose/
 
 N = pixel_coords.shape[0]
+print(N)
 
 list_of_2by12_arrays = []
 for i in range(N):
