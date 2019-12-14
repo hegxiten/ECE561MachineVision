@@ -1,6 +1,5 @@
 graph 1 {
 node [shape=circle]
- n15 --  n16
  n14 --  n15
  n13 --  n14
  n12 --  n15

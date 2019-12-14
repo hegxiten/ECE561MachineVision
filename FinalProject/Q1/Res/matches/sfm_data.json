@@ -10,11 +10,11 @@
                     "id": 2147483649,
                     "data": {
                         "local_path": "",
-                        "filename": "IMG_20191214_012503.jpg",
-                        "width": 4032,
-                        "height": 3024,
+                        "filename": "IMG_9379.JPG",
+                        "width": 3264,
+                        "height": 2448,
                         "id_view": 0,
-                        "id_intrinsic": 4294967295,
+                        "id_intrinsic": 0,
                         "id_pose": 0
                     }
                 }
@@ -28,11 +28,11 @@
                     "id": 2147483650,
                     "data": {
                         "local_path": "",
-                        "filename": "IMG_20191214_012505.jpg",
-                        "width": 4032,
-                        "height": 3024,
+                        "filename": "IMG_9380.JPG",
+                        "width": 3264,
+                        "height": 2448,
                         "id_view": 1,
-                        "id_intrinsic": 4294967295,
+                        "id_intrinsic": 0,
                         "id_pose": 1
                     }
                 }
@@ -46,11 +46,11 @@
                     "id": 2147483651,
                     "data": {
                         "local_path": "",
-                        "filename": "IMG_20191214_012507.jpg",
-                        "width": 4032,
-                        "height": 3024,
+                        "filename": "IMG_9381.JPG",
+                        "width": 3264,
+                        "height": 2448,
                         "id_view": 2,
-                        "id_intrinsic": 4294967295,
+                        "id_intrinsic": 0,
                         "id_pose": 2
                     }
                 }
@@ -64,11 +64,11 @@
                     "id": 2147483652,
                     "data": {
                         "local_path": "",
-                        "filename": "IMG_20191214_012508.jpg",
-                        "width": 4032,
-                        "height": 3024,
+                        "filename": "IMG_9382.JPG",
+                        "width": 3264,
+                        "height": 2448,
                         "id_view": 3,
-                        "id_intrinsic": 4294967295,
+                        "id_intrinsic": 0,
                         "id_pose": 3
                     }
                 }
@@ -82,11 +82,11 @@
                     "id": 2147483653,
                     "data": {
                         "local_path": "",
-                        "filename": "IMG_20191214_012510.jpg",
-                        "width": 4032,
-                        "height": 3024,
+                        "filename": "IMG_9383.JPG",
+                        "width": 3264,
+                        "height": 2448,
                         "id_view": 4,
-                        "id_intrinsic": 4294967295,
+                        "id_intrinsic": 0,
                         "id_pose": 4
                     }
                 }
@@ -100,11 +100,11 @@
                     "id": 2147483654,
                     "data": {
                         "local_path": "",
-                        "filename": "IMG_20191214_012513.jpg",
-                        "width": 4032,
-                        "height": 3024,
+                        "filename": "IMG_9384.JPG",
+                        "width": 3264,
+                        "height": 2448,
                         "id_view": 5,
-                        "id_intrinsic": 4294967295,
+                        "id_intrinsic": 0,
                         "id_pose": 5
                     }
                 }
@@ -118,11 +118,11 @@
                     "id": 2147483655,
                     "data": {
                         "local_path": "",
-                        "filename": "IMG_20191214_012516.jpg",
-                        "width": 4032,
-                        "height": 3024,
+                        "filename": "IMG_9385.JPG",
+                        "width": 3264,
+                        "height": 2448,
                         "id_view": 6,
-                        "id_intrinsic": 4294967295,
+                        "id_intrinsic": 0,
                         "id_pose": 6
                     }
                 }
@@ -136,11 +136,11 @@
                     "id": 2147483656,
                     "data": {
                         "local_path": "",
-                        "filename": "IMG_20191214_012518.jpg",
-                        "width": 4032,
-                        "height": 3024,
+                        "filename": "IMG_9386.JPG",
+                        "width": 3264,
+                        "height": 2448,
                         "id_view": 7,
-                        "id_intrinsic": 4294967295,
+                        "id_intrinsic": 0,
                         "id_pose": 7
                     }
                 }
@@ -154,18 +154,187 @@
                     "id": 2147483657,
                     "data": {
                         "local_path": "",
-                        "filename": "IMG_20191214_012520.jpg",
-                        "width": 4032,
-                        "height": 3024,
+                        "filename": "IMG_9387.JPG",
+                        "width": 3264,
+                        "height": 2448,
                         "id_view": 8,
-                        "id_intrinsic": 4294967295,
+                        "id_intrinsic": 0,
                         "id_pose": 8
+                    }
+                }
+            }
+        },
+        {
+            "key": 9,
+            "value": {
+                "polymorphic_id": 1073741824,
+                "ptr_wrapper": {
+                    "id": 2147483658,
+                    "data": {
+                        "local_path": "",
+                        "filename": "IMG_9388.JPG",
+                        "width": 3264,
+                        "height": 2448,
+                        "id_view": 9,
+                        "id_intrinsic": 0,
+                        "id_pose": 9
+                    }
+                }
+            }
+        },
+        {
+            "key": 10,
+            "value": {
+                "polymorphic_id": 1073741824,
+                "ptr_wrapper": {
+                    "id": 2147483659,
+                    "data": {
+                        "local_path": "",
+                        "filename": "IMG_9389.JPG",
+                        "width": 3264,
+                        "height": 2448,
+                        "id_view": 10,
+                        "id_intrinsic": 0,
+                        "id_pose": 10
+                    }
+                }
+            }
+        },
+        {
+            "key": 11,
+            "value": {
+                "polymorphic_id": 1073741824,
+                "ptr_wrapper": {
+                    "id": 2147483660,
+                    "data": {
+                        "local_path": "",
+                        "filename": "IMG_9390.JPG",
+                        "width": 3264,
+                        "height": 2448,
+                        "id_view": 11,
+                        "id_intrinsic": 0,
+                        "id_pose": 11
+                    }
+                }
+            }
+        },
+        {
+            "key": 12,
+            "value": {
+                "polymorphic_id": 1073741824,
+                "ptr_wrapper": {
+                    "id": 2147483661,
+                    "data": {
+                        "local_path": "",
+                        "filename": "IMG_9391.JPG",
+                        "width": 3264,
+                        "height": 2448,
+                        "id_view": 12,
+                        "id_intrinsic": 0,
+                        "id_pose": 12
+                    }
+                }
+            }
+        },
+        {
+            "key": 13,
+            "value": {
+                "polymorphic_id": 1073741824,
+                "ptr_wrapper": {
+                    "id": 2147483662,
+                    "data": {
+                        "local_path": "",
+                        "filename": "IMG_9392.JPG",
+                        "width": 3264,
+                        "height": 2448,
+                        "id_view": 13,
+                        "id_intrinsic": 0,
+                        "id_pose": 13
+                    }
+                }
+            }
+        },
+        {
+            "key": 14,
+            "value": {
+                "polymorphic_id": 1073741824,
+                "ptr_wrapper": {
+                    "id": 2147483663,
+                    "data": {
+                        "local_path": "",
+                        "filename": "IMG_9393.JPG",
+                        "width": 3264,
+                        "height": 2448,
+                        "id_view": 14,
+                        "id_intrinsic": 0,
+                        "id_pose": 14
+                    }
+                }
+            }
+        },
+        {
+            "key": 15,
+            "value": {
+                "polymorphic_id": 1073741824,
+                "ptr_wrapper": {
+                    "id": 2147483664,
+                    "data": {
+                        "local_path": "",
+                        "filename": "IMG_9394.JPG",
+                        "width": 3264,
+                        "height": 2448,
+                        "id_view": 15,
+                        "id_intrinsic": 0,
+                        "id_pose": 15
+                    }
+                }
+            }
+        },
+        {
+            "key": 16,
+            "value": {
+                "polymorphic_id": 1073741824,
+                "ptr_wrapper": {
+                    "id": 2147483665,
+                    "data": {
+                        "local_path": "",
+                        "filename": "IMG_9395.JPG",
+                        "width": 3264,
+                        "height": 2448,
+                        "id_view": 16,
+                        "id_intrinsic": 0,
+                        "id_pose": 16
                     }
                 }
             }
         }
     ],
-    "intrinsics": [],
+    "intrinsics": [
+        {
+            "key": 0,
+            "value": {
+                "polymorphic_id": 2147483649,
+                "polymorphic_name": "pinhole_radial_k3",
+                "ptr_wrapper": {
+                    "id": 2147483666,
+                    "data": {
+                        "width": 3264,
+                        "height": 2448,
+                        "focal_length": 2770.0614133495498,
+                        "principal_point": [
+                            1632.0,
+                            1224.0
+                        ],
+                        "disto_k3": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ]
+                    }
+                }
+            }
+        }
+    ],
     "extrinsics": [],
     "structure": [],
     "control_points": []
